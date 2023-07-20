@@ -19,4 +19,5 @@ button{
 }
 label{
   cursor: pointer;
+  justify-content: space-between;
 }
