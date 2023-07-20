@@ -6,8 +6,10 @@ import Todo from "./pages/todo/Todo";
 import PrivateRoute from "./util/PrivateRoute";
 import AuthenticatedRoute from "./util/AuthenticatedRoute";
 import "./assets/global.scss";
-function App() {
+import firebase from "./firebase/firebase";
 
+function App() {
+ const auth = firebase.auth();
   return (
     <BrowserRouter basename="/">
       <Routes>

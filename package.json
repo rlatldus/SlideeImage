@@ -11,12 +11,15 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.2",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
+    "scss": "^0.2.4",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.11",
-    "web-vitals": "^2.1.4",
-    "scss": "^0.2.4"
+    "swiper": "^6.8.4",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
