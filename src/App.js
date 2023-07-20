@@ -5,8 +5,14 @@ import SignIn from "./pages/signin/SignIn";
 import Todo from "./pages/todo/Todo";
 import PrivateRoute from "./util/PrivateRoute";
 import AuthenticatedRoute from "./util/AuthenticatedRoute";
+// import { firestore } from "./firebase/firebase";
+// import { useEffect } from "react";
 
-const App = () => {
+function App() {
+//   useEffect(() => {
+//     console.log(firestore);
+//   });
+
   return (
     <BrowserRouter basename="/">
       <Routes>

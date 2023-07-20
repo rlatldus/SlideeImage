@@ -1,57 +1,86 @@
-import React, { useEffect, useState } from "react";
-import { Button } from "./../button/Button";
-import { Label } from "./../label/Label";
+import React from "react";
+import { Link } from "react-router-dom";
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-// import axios from "axios";
+import { useForm } from "react-hook-form";
 import * as Styled from "./Style";
 
-const Form = ({ children, Authentication, alertMessage, navigation }) => {
+const Form = () => {
   const navigate = useNavigate();
-  const [userData, setUserData] = useState({ email: "", password: "" });
-  const [isAvailable, setIsAvailable] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserData({ ...userData, [name]: value });
-  };
-
-  useEffect(() => {
-    setIsAvailable(userData.email.includes("@") && userData.password.length >= 8);
-  }, [userData.email, userData.password]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (isAvailable) {
-      // axios
-      //   .post(
-      //     `https://www.pre-onboarding-selection-task.shop/auth/${Authentication}`,
-      //     { email: userData.email, password: userData.password },
-      //     {
-      //       headers: { "Content-Type": "application/json" },
-      //     }
-      //   )
-      //   .then(function (response) {
-      //     alert(alertMessage);
-      //     Authentication === "signin" && localStorage.setItem("access_token", response.data.access_token);
-      //     navigate(navigation);
-      //     console.log(Authentication, navigation);
-      //   })
-      //   .catch(function (error) {
-      //     console.log(error.response);
-      //     error.response.data.message === "Unauthorized" ? alert("회원정보를 다시 한 번 확인해주세요.") : alert(error.response.data.message);
-      //   });
+  async function authRegister(email, password) {
+    try {
+      const auth = getAuth();
+      const user = await createUserWithEmailAndPassword(auth, email, password);
+      console.log(user);
+      alert("회원가입되셨어요~");
+      navigate("/signin");
+    } catch (error) {
+      console.log(error.message);
+      alert("회원정보를 다시 획인해줘세요~");
     }
+  }
+
+  const onSubmit = async (data, e) => {
+    e.preventDefault();
+    authRegister(data.email, data.password);
+    console.log(data);
   };
+
+  const {
+    register,
+    handleSubmit,
+    formState: { isSubmitting, isDirty, errors },
+  } = useForm({ mode: "onChange" });
 
   return (
-    <Styled.SignForm>
-      <form>
-        <Label handleChange={handleChange} email={userData.email} password={userData.password} />
-        <Button primary data-testid={`${Authentication}-button`} disabled={!isAvailable} click={handleSubmit}>
-          {children}
-        </Button>
-      </form>
-    </Styled.SignForm>
+    <section>
+      <h2>회원가입 페이지</h2>
+      <Styled.SignForm onSubmit={handleSubmit(onSubmit)}>
+        <label>
+          이메일
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="이메일을 입력해주세요"
+            tabIndex="2"
+            {...register("email", {
+              required: "이메일은 필수 입력입니다.",
+              pattern: {
+                value: /\S+@\S+\.\S+/,
+                message: "이메일 형식에 맞지 않습니다.",
+              },
+            })}
+          />
+        </label>
+        {errors.userEmail && <small role="alert">{errors.userEmail.message}</small>}
+        <label>
+          비밀번호
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="비밀번호를 입력해줘세요"
+            maxLength="15"
+            autoComplete="current-password"
+            aria-invalid={!isDirty ? undefined : errors.password ? "true" : "false"}
+            {...register("password", {
+              required: "비밀번호는 필수 입력입니다.",
+              minLength: {
+                value: 8,
+                message: "8자리 이상 15자리 이하로 비밀번호를 사용해주세요.",
+              },
+            })}
+          />
+        </label>
+        {errors.password && <small role="alert">{errors.password.message}</small>}
+        <button type="submit" disabled={isSubmitting}>
+          회원가입
+        </button>
+      </Styled.SignForm>
+      <Link to="/signin">로그인</Link>
+    </section>
   );
 };
 
