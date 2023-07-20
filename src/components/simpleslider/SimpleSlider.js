@@ -1,39 +1,23 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Box from "../box/Box.js";
+import "slick-carousel/slick/slick.css";
 import "./slider.scss";
 
-const SimpleSlider = () => {
+const SimpleSlider = ({ children }) => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true, // 자동 슬라이드 활성화
+    autoplaySpeed: 2000,
   };
 
   return (
     <div>
-      <h2> Single Item</h2>
-      <Slider {...settings}>
-        <div>
-          <Box />
-        </div>
-        <div>
-          <Box />
-        </div>
-        <div>
-          <Box />
-        </div>
-        <div>
-          <Box />
-        </div>
-        <div>
-          <Box />
-        </div>
-      </Slider>
+      <Slider {...settings}>{children}</Slider>
     </div>
   );
 };

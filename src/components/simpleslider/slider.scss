@@ -1,6 +1,17 @@
-.slider {
-    width: 80%;
-    /* 너비 조절을 원하는 값으로 변경 */
+/* 슬라이더 컨테이너 스타일 */
+.slick-slider {
+    width: 50%;
+    /* 원하는 가로 길이(예: 50%)로 설정 */
     margin: 0 auto;
-    /* 가운데 정렬을 위해 margin auto 설정 */
+    /* 가운데 정렬을 위해 필요한 스타일 */
+}
+
+/* 슬라이드 아이템 내부 컨텐츠에 대한 스타일 설정 (옵션) */
+.slick-slide div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    /* 슬라이드 아이템의 높이 설정 (예: 200px) */
 }

@@ -1,6 +1,6 @@
 import * as Styled from "./Style";
-const Box = () => {
-  return <Styled.Box>ddd</Styled.Box>;
+const Box = ({children}) => {
+  return <Styled.Box>{children}</Styled.Box>;
 };
 
 export default Box;
