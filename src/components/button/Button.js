@@ -12,11 +12,11 @@ const SubmitButton = ({ children, ...rest }) => {
   );
 };
 
-const Button = ({ children, click, ...rest }) => {
+const Button = ({ children, onClick, ...rest }) => {
   return (
     <Styled.ButtonBg>
       <Styled.ButtonShadow {...rest}>
-        <Styled.ButtonCont onClick={click} {...rest}>
+        <Styled.ButtonCont onClick={onClick} {...rest}>
           {children}
         </Styled.ButtonCont>
       </Styled.ButtonShadow>

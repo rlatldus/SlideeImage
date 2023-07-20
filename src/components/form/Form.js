@@ -79,7 +79,7 @@ const Form = () => {
           회원가입
         </button>
       </Styled.SignForm>
-      <Link to="/signin">로그인</Link>
+      <Link to="/signin">로그인</Link>으로 이동하시려면 클릭해주세요
     </section>
   );
 };
