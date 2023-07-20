@@ -7,4 +7,6 @@ export const Title = styled.p`
   list-style: none;
   width: 50%;
   margin: 0 auto;
+  width: 450px;
+  height: 200px;
 `;

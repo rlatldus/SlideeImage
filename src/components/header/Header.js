@@ -1,6 +1,6 @@
 import * as Styled from "./Style";
 import { Link } from "react-router-dom";
-
+import Switch from "./../switch/Switch";
 const Header = () => {
   return (
     <Styled.Header>
@@ -14,9 +14,8 @@ const Header = () => {
       <Styled.Right>
         <Link to="/signin">Sign In</Link>
         <Link to="/signup">Sign Up</Link>
-        {/* <Link to="/" onClick={logout}> */}
-        Logout
-        {/* </Link> */}
+        <Link to="/">Logout</Link>
+        <Switch />
       </Styled.Right>
     </Styled.Header>
   );

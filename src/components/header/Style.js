@@ -16,6 +16,6 @@ export const Left = styled.div`
 export const Right = styled.div`
   margin: 10px;
   display: flex;
-  width: 200px;
+  width: 300px;
   justify-content: space-between;
 `;
