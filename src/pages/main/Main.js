@@ -4,7 +4,8 @@ import { Button } from "../../components/button/Button";
 import * as Styled from "./style";
 import Header from "../../components/header/Header";
 import { TypingEffect } from "../../components/TypingEffect/TypingEffect";
-import SwiperEffect from "../../components/swiper/swiper";
+import SimpleSlider from "../../components/simpleslider/SimpleSlider";
+import Image from "../../components/image/Image";
 
 const Main = () => {
   const description = `안녕하세요. 접속하신 페이지는 Siyeon - AI의 'home'입니다. 
@@ -13,6 +14,7 @@ const Main = () => {
   return (
     <>
       <Header />
+      <Image />
       <TodoForm>
         <Link to="/">
           <Styled.Title>
@@ -22,11 +24,9 @@ const Main = () => {
         <Link to="/signin">
           <Button primary>로그인</Button>
         </Link>
-        <Link to="/signup">
-          <Button>회원가입</Button>
-        </Link>
+        <Link to="/signout">회원가입</Link>
       </TodoForm>
-      <SwiperEffect/>
+      <SimpleSlider />
     </>
   );
 };

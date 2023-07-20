@@ -14,8 +14,10 @@ function Login() {
     try {
       const user = await signInWithEmailAndPassword(auth, email, password);
       console.log(user);
+      localStorage.setItem("access_token", user.user.accessToken);
       alert("로그인되셨어요~");
-      navigate("/");
+
+      navigate("/todo");
     } catch (error) {
       console.log(error.message);
       alert("회원정보를 확인해줘세요~");
