@@ -6,7 +6,8 @@ Fixabay처럼 이미지를 조회.검색 가능한 사이트<br />
 - **`Link` :** [Sildee Image 방문하기](https://movie-33ea4.web.app/)
 
 
-![image](https://github.com/rlatldus/Movie/assets/122216298/4e39e8aa-cdfd-4750-a7e9-cd2a0e480a9b)
+
+![image](https://github.com/rlatldus/SlideeImage/assets/122216298/5cdbc05a-9774-441c-a5e8-22d182c4aaab)
 
 
 <br/>
