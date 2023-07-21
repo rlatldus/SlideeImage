@@ -10,7 +10,9 @@ import * as Styled from "./style";
 
 const Main = () => {
   const { isLoading: Loading, data: postUserData } = useGetMovieImg();
-
+  if (Loading) {
+    <idv>로딩중... </idv>;
+  }
   const description = `안녕하세요. 접속하신 페이지는 Siyeon - AI의 'home'입니다. 
 로그인 후 main페이지에 이동해보세요 :)`;
 
@@ -18,15 +20,11 @@ const Main = () => {
     <>
       <Header />
       <SimpleSlider>
-        {postUserData && postUserData.results && postUserData.results.length > 0 ? (
-          postUserData.results.map((movie) => (
-            <img key={movie.id} src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="Movie Poster" />
-          ))
-        ) : (
-          <p>이미지 로딩중...</p>
-        )}
+        {postUserData?.results.map((movie) => (
+          <img key={movie.id} src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="Movie Poster" />
+        ))}
       </SimpleSlider>
-          <PixabayImg/>
+      <PixabayImg />
       <TodoForm>
         <Link to="/">
           <Styled.Title>
