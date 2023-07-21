@@ -62,9 +62,6 @@ Fixabay처럼 이미지를 조회.검색 가능한 사이트<br />
 
 </div>
 
-
-https://github.com/rlatldus/SlideeImage/assets/122216298/ee67e770-6d48-4b2b-8ff2-8b4a398ecfc1
-
 | |페이지 |설명|
 |:--:|:--:|:--:|
 |Home| <img src="https://github.com/rlatldus/SlideeImage/assets/122216298/ce0c26a4-93c2-4050-bb6d-9ab11d09abe0" width="300px" /> | </br> `Pixabay`에서 `API` `GET`해옴 `title`에 `typing`효과 <br/>  | 
