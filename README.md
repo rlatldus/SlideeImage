@@ -1,5 +1,5 @@
 # Slider Image
-애정하는 영화 좋아요 및 문의 가능한 사이트<br />
+Fixabay처럼 이미지를 조회.검색 가능한 사이트<br />
 - **`Team name` :** Sildee Image ( 이미지 슬라이드 제작 )
 - **`Project duration` :** 2023.07.20 - 2023.07.21
 - **`Team members` :** 김시연
