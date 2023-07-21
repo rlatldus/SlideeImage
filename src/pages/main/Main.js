@@ -4,9 +4,8 @@ import { Button } from "../../components/button/Button";
 import { TodoForm } from "../../components/form/Form";
 import Header from "../../components/header/Header";
 import PixabayImg from "../../components/pixabayImg/PixabayImg";
-import SimpleSlider from "../../components/simpleslider/SimpleSlider";
 import { useGetMovieImg } from "../../hooks/useMovieImage";
-import * as Styled from "./style";
+import "./style.scss";
 
 const Main = () => {
   const { isLoading: Loading, data: postUserData } = useGetMovieImg();
@@ -19,16 +18,11 @@ const Main = () => {
   return (
     <>
       <Header />
-      {/* <SimpleSlider>
-        {postUserData?.results.map((movie) => (
-          <img key={movie.id} src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="Movie Poster" />
-        ))}
-      </SimpleSlider> */}
       <PixabayImg search={"yellow+flowers"} />
       <TodoForm>
-        <Styled.Title>
-          <TypingEffect text={description} />
-        </Styled.Title>
+        <div className="title">
+          <TypingEffect className="text" text={description} />
+        </div>
         <Link to="/signin">
           <Button primary>로그인</Button>
         </Link>

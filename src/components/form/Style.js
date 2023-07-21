@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
 export const TodosForm = styled.div`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   padding-top: 100px;
   flex-direction: column;
