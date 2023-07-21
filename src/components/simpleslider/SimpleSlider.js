@@ -4,20 +4,22 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./slider.scss";
 
-const SimpleSlider = ({ children }) => {
-  const settings = {
+const SimpleSlider = ({ setting, children }) => {
+  const defaultSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, // 자동 슬라이드 활성화
+     slidesToShow: 4,
+    autoplay: true,
     autoplaySpeed: 2000,
   };
 
+  const mergedSettings = { ...defaultSettings, ...setting };
+
   return (
     <div>
-      <Slider {...settings}>{children}</Slider>
+      <Slider {...mergedSettings}>{children}</Slider>
     </div>
   );
 };

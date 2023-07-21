@@ -1,8 +1,8 @@
 import SimpleSlider from "../simpleslider/SimpleSlider";
 import { useGetFlowerImg } from "../../hooks/useFlowerImage";
 
-const PixabayImg = () => {
-  const { isLoading: Loading, data: postFlowerData } = useGetFlowerImg();
+const PixabayImg = (search) => {
+  const { isLoading: Loading, data: postFlowerData } = useGetFlowerImg(search);
 
   if (Loading) {
     return "로딩중..";

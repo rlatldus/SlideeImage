@@ -3,15 +3,17 @@ import PixabayImg from "../../components/pixabayImg/PixabayImg";
 import SimpleSlider from "../../components/simpleslider/SimpleSlider";
 
 function Todos() {
+  // const AIsetting = { slidesToShow: 2 };
   return (
     <>
       <Header />
-
       <SimpleSlider />
-      <PixabayImg />
-      <PixabayImg />
-      <PixabayImg />
-      <PixabayImg />
+      <div className="align">
+        <PixabayImg className="item" search={"AI+service"} />
+        <PixabayImg className="item" search={"math"} />
+        <PixabayImg className="item" search={"iclave"} />
+        <PixabayImg className="item" search={"SearchGPT"} />
+      </div>
     </>
   );
 }

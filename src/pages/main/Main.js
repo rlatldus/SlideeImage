@@ -11,30 +11,30 @@ import * as Styled from "./style";
 const Main = () => {
   const { isLoading: Loading, data: postUserData } = useGetMovieImg();
   if (Loading) {
-    <idv>로딩중... </idv>;
+    return "로딩중...";
   }
-  const description = `안녕하세요. 접속하신 페이지는 Siyeon - AI의 'home'입니다. 
+  const description = `안녕하세요. 접속하신 페이지는 Siyeon 'home'입니다. 
 로그인 후 main페이지에 이동해보세요 :)`;
 
   return (
     <>
       <Header />
-      <SimpleSlider>
+      {/* <SimpleSlider>
         {postUserData?.results.map((movie) => (
           <img key={movie.id} src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="Movie Poster" />
         ))}
-      </SimpleSlider>
-      <PixabayImg />
+      </SimpleSlider> */}
+      <PixabayImg search={"yellow+flowers"} />
       <TodoForm>
-        <Link to="/">
-          <Styled.Title>
-            <TypingEffect text={description} />
-          </Styled.Title>
-        </Link>
+        <Styled.Title>
+          <TypingEffect text={description} />
+        </Styled.Title>
         <Link to="/signin">
           <Button primary>로그인</Button>
         </Link>
-        <Link to="/signout">회원가입</Link>
+        <Link to="/signup">
+          <Button>회원가입</Button>
+        </Link>
       </TodoForm>
     </>
   );

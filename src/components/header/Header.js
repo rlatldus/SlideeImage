@@ -1,9 +1,7 @@
-import * as Styled from "./Style";
-import { Link } from "react-router-dom";
-import Switch from "./../switch/Switch";
-import { Button } from "../button/Button";
+import { Link, useNavigate } from "react-router-dom";
 import firebase from "./../../firebase/firebase"; // firebase.js 파일을 import합니다.
-import { useNavigate } from "react-router-dom";
+import Switch from "./../switch/Switch";
+import * as Styled from "./Style";
 
 const Header = () => {
   const navigate = useNavigate();
