@@ -14,10 +14,8 @@ const Header = () => {
         localStorage.removeItem("access_token");
         alert("로그아웃되셨어요");
         navigate("/");
-        console.log("로그아웃되셨어요");
       })
       .catch((error) => {
-        console.log("로그아웃 실패", error);
       });
   };
   return (
@@ -32,7 +30,9 @@ const Header = () => {
       <Styled.Right>
         <Link to="/signin">Sign In</Link>
         <Link to="/signup">Sign Up</Link>
-        <button onClick={logout}>Logout</button>
+        <button onClick={logout}>
+          <a>Logout</a>
+        </button>
         <Switch />
       </Styled.Right>
     </Styled.Header>

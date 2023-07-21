@@ -5,7 +5,7 @@ import { TodoForm } from "../../components/form/Form";
 import Header from "../../components/header/Header";
 import PixabayImg from "../../components/pixabayImg/PixabayImg";
 import { useGetMovieImg } from "../../hooks/useMovieImage";
-import "./style.scss";
+import s from "./main.module.scss";
 
 const Main = () => {
   const { isLoading: Loading, data: postUserData } = useGetMovieImg();
@@ -18,11 +18,11 @@ const Main = () => {
   return (
     <>
       <Header />
+        <div className={s.title}>
+          <TypingEffect text={description} />
+        </div>
       <PixabayImg search={"yellow+flowers"} />
       <TodoForm>
-        <div className="title">
-          <TypingEffect className="text" text={description} />
-        </div>
         <Link to="/signin">
           <Button primary>로그인</Button>
         </Link>

@@ -13,13 +13,11 @@ function Login() {
     const auth = getAuth();
     try {
       const user = await signInWithEmailAndPassword(auth, email, password);
-      console.log(user);
       localStorage.setItem("access_token", user.user.accessToken);
       alert("로그인되셨어요~");
 
       navigate("/todo");
     } catch (error) {
-      console.log(error.message);
       alert("회원정보를 확인해줘세요~");
     }
   }
@@ -27,7 +25,6 @@ function Login() {
   const onSubmit = async (data, e) => {
     e.preventDefault();
     authsignin(data.email, data.password);
-    console.log(data);
   };
 
   const {

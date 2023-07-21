@@ -14,11 +14,9 @@ const Signup = () => {
     try {
       const auth = getAuth();
       const user = await createUserWithEmailAndPassword(auth, email, password);
-      console.log(user);
       alert("회원가입되셨어요~");
       navigate("/signin");
     } catch (error) {
-      console.log(error.message);
       alert("회원정보를 다시 획인해줘세요~");
     }
   }
@@ -26,7 +24,6 @@ const Signup = () => {
   const onSubmit = async (data,e) => {
     e.preventDefault();
     authRegister(data.email, data.password);
-    console.log(data)
   };
 
   const {

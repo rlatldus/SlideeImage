@@ -11,14 +11,6 @@ const Private = () => {
   const handleClick = () => {
     const newStatus = !status;
     setStatus(newStatus);
-    // axios
-    //   .put(`${ROOT_API}/users/setting/private/${newStatus}`, newStatus, {
-    // headers: { "X-AUTH-TOKEN": auth.accessToken },
-    //   })
-    //   .then((response) => {
-    // console.log(response.config);
-    // setStatus(response.config.data);
-    //   });
   };
 
   return (
