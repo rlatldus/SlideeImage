@@ -3,7 +3,7 @@ Fixabay처럼 이미지를 조회.검색 가능한 사이트<br />
 - **`Team name` :** Sildee Image ( 이미지 슬라이드 제작 )
 - **`Project duration` :** 2023.07.20 - 2023.07.21
 - **`Team members` :** 김시연
-- **`Link` :** [Sildee Image 방문하기](https://movie-33ea4.web.app/)
+- **`Link` :** [Sildee Image 방문하기](https://artificial-intelligence-26e36.web.app/)
 
 
 
@@ -61,6 +61,11 @@ Fixabay처럼 이미지를 조회.검색 가능한 사이트<br />
 ```
 
 </div>
+
+
+https://github.com/rlatldus/SlideeImage/assets/122216298/ee67e770-6d48-4b2b-8ff2-8b4a398ecfc1
+
+
 
 <br/>
 
