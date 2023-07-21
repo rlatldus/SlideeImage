@@ -65,7 +65,12 @@ Fixabay처럼 이미지를 조회.검색 가능한 사이트<br />
 
 https://github.com/rlatldus/SlideeImage/assets/122216298/ee67e770-6d48-4b2b-8ff2-8b4a398ecfc1
 
-
+| |페이지 |설명|
+|:--:|:--:|:--:|
+|Home| <img src="https://github.com/rlatldus/SlideeImage/assets/122216298/ce0c26a4-93c2-4050-bb6d-9ab11d09abe0" width="300px" /> | </br> `Pixabay`에서 `API` `GET`해옴 `title`에 `typing`효과 <br/>  | 
+| Login/out page | <img src= "https://github.com/rlatldus/SlideeImage/assets/122216298/9be241fe-f0a8-42e3-a934-55c10d796ed2" width="300px"/>|  - 회원가입페이지에서 회원가입 시 로그인페이지 이동 <br/>  |
+| Main page | <img src="https://github.com/rlatldus/SlideeImage/assets/122216298/539d02d2-8260-4930-9f32-11736b0505ea" width="300px"/> | - `Pixabay`에서 `API` `GET`해옴 `React Slide`효과가 적용되어 있음  <br/>|
+<br/>
 
 <br/>
 
